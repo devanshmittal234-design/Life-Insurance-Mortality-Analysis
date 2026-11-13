@@ -80,36 +80,28 @@ Results Export: Export the calculated life table and selected-age summary into C
 The following actuarial formulas are used:
 
 Central Mortality Rate
-
-mx=Deaths/Exposure
+(mx)=Deaths/Exposure
 
 Probability of Death
-
-qx=mx/(1+(1-ax)*mx)
+(qx)=mx/(1+(1-ax)*mx)
 
 Probability of Survival
-
-px=1-qx
+(px)=1-qx
 
 Number of Survivors
-
-l(x+1)=lx*px
+(l(x+1))=lx*px
 
 Number of Deaths
-
-dx=lx*qx
+(dx)=lx*qx
 
 Person-Years Lived
-
-Lx=lx-(1-ax)*dx
+(Lx)=lx-(1-ax)*dx
 
 Total Future Person-Years
-
-Tx=Sum of future Lx values from age x onwards
+(Tx)=Sum of future Lx values from age x onwards
 
 Remaining Life Expectancy
-
-ex=Tx/lx
+(ex)=Tx/lx
 
 An initial population of 100,000 individuals is assumed, and ax is taken as 0.5 for the one-year age intervals.
 
@@ -121,18 +113,22 @@ The project includes four visualisations:
 1. Mortality Rate by Age
 
 Illustrates how central mortality rates vary across different ages.
+<img src="Life_Insurance_Mortality_Analysis/plots/Mortality_Rate.png" width="500">
 
 2. Probability of Death by Age
 
 Shows the probability of an individual dying between age x and age x+1.
+<img src="Life_Insurance_Mortality_Analysis/plots/Probability_of_Death.png" width="500">
 
 3. Life Table Survival Curve
 
 Demonstrates the decline in the surviving population from the initial cohort of 100,000 individuals.
+<img src="Life_Insurance_Mortality_Analysis/plots/Survival_Curve.png" width="500">
 
 4. Life Expectancy by Age
 
 Illustrates the remaining life expectancy at different ages based on the constructed life table.
+<img src="Life_Insurance_Mortality_Analysis/plots/Life_Expectancy.png" width="500">
 
 
 ## 8. Key Observations
